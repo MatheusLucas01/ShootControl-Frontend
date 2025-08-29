@@ -35,7 +35,8 @@ const Login = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-4">
-            <div className="card-dark max-w-md w-full">
+            {/* Div do quadrado de login */}
+            <div className="card-dark max-w-md w-full border-1 border-white p-6">
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                         🎯 ShotControl
@@ -49,16 +50,16 @@ const Login = () => {
                     </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 bg-">
                     <div>
-                        <label className="block text-black text-sm font-medium mb-2">
+                        <label className="block text-white text-sm font-medium mb-2">
                             Email
                         </label>
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="text-black bg-white"
+                            className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             placeholder="admin@email.com"
                             required
                         />
@@ -81,7 +82,7 @@ const Login = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full btn-primary py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full btn-primary py-3 disabled:opacity-50 disabled:cursor-not-allowed text-black border-2 bg-white"
                     >
                         {loading ? 'Entrando...' : 'Entrar no Sistema'}
                     </button>
